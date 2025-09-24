@@ -1005,6 +1005,32 @@
             margin: 20px;
         }
         
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            border: none;
+            color: #666;
+            font-size: 24px;
+            font-weight: bold;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .modal-close-btn:hover {
+            background: rgba(0, 0, 0, 0.2);
+            color: #333;
+            transform: scale(1.1);
+        }
+        
         @keyframes slideIn {
             from { transform: translateY(-50px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
@@ -1017,6 +1043,7 @@
             margin-bottom: 20px;
             padding-bottom: 15px;
             border-bottom: 2px solid #f8f9fa;
+            position: relative;
         }
         
         .alternative-header h3 {
@@ -3358,6 +3385,7 @@
             display: none; /* Hidden by default */
             z-index: 10000;
             backdrop-filter: blur(4px);
+            overflow-y: auto;
         }
         
         .welcome-section[style*="display: block"] {
@@ -3446,10 +3474,21 @@
         
         /* Mobile responsive for welcome popup */
         @media (max-width: 768px) {
-        .welcome-content {
+            .welcome-section[style*="display: block"] {
+                display: block !important;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 20px 0;
+            }
+            
+            .welcome-content {
                 max-width: 95%;
                 padding: 30px 20px;
-                margin: 20px;
+                margin: 20px auto;
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: none;
             }
             
             .welcome-section h2 {
@@ -3583,6 +3622,13 @@
             .welcome-actions {
                 flex-direction: column;
                 align-items: center;
+                gap: 15px;
+                margin-top: 30px;
+            }
+            
+            .welcome-dont-show {
+                margin-top: 20px;
+                text-align: center;
             }
         }
 
@@ -4112,6 +4158,7 @@
               <div class="alternative-header">
                 <span class="alternative-icon">📦</span>
                 <h3 id="orderSummaryTitle">${t('orderSummary')}</h3>
+                <button class="modal-close-btn" onclick="closeCustomerInfoModal()" title="Close">&times;</button>
               </div>
               <div class="order-summary-card" style="margin-top:0;">
                 <div id="orderSummaryBodyModal"></div>
@@ -4126,6 +4173,7 @@
               <div class="alternative-header">
                 <span class="alternative-icon">📝</span>
                 <h3 id="customerInfoTitle">Customer Information & Order Finalization</h3>
+                <button class="modal-close-btn" onclick="closeCustomerInfoModal()" title="Close">&times;</button>
               </div>
               <form id="customerForm" class="customer-form-modern" style="margin-bottom:0;">
                 <div class="form-group-modern">
