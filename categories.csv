@@ -8,7 +8,7 @@
 07;Mağaza İçi İletişim;In-Store Communication Accessories
 08;Mağaza Ekipmanları;Store Equipments
 09;İlan Askı Çözümleri;Ceiling Solutions
-10;Güvenlik & HL Display;EAS & HL Displayy
+10;Güvenlik;EAS
 11;ESL Sabitleme Çözümleri;ESL Fixing Solutions
 ;;
 Alt Kategori;Alt Kategori Adı;Alt Kategori Adı ENG
@@ -41,8 +41,7 @@ Alt Kategori;Alt Kategori Adı;Alt Kategori Adı ENG
 09.1;Tavan Sistemleri;Ceiling Systems
 09.2;Taban Sistemleri;Ground Systems
 09.3;Aksesuarlar;Accessories
-10.1;HL Display;HL Display
-10.2;Ürün Güvenliği;EAS
+10.1;Ürün Güvenliği;EAS
 11.1;Imago;Imago
 11.2;SoluM;SoluM
 11.3;ESL Raf Profilleri;ESL Fixing
